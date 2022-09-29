@@ -1,59 +1,60 @@
 #include "Data.h"
 
-Data::Data(std::string patch)
+//Reads matrix and checks if it is square
+Data::Data(const std::string& path)
 {
-	SIZE = 0;
+	size = 0;
 	std::fstream in;
-	in.open(patch);
+	in.open(path);
 	try
 	{
 		while (!in.eof())
 		{
-			int value;
+			std::int32_t value;
 			in >> value;
-			matrix.push_back(value);
+			matrix.emplace_back(value);
 		}
-		if (sqrt(matrix.size()) != (int)sqrt(matrix.size()))
+		if (std::sqrt(matrix.size()) != static_cast<std::int32_t>(std::sqrt(matrix.size())))
 		{
 			matrix.clear();
 			std::cout << "incorrect matrix size\n";
 			std::exit(1);
 		}
 		else
-			SIZE = sqrt(matrix.size());
+			size = std::sqrt(matrix.size());
 		in.close();
 	}
 	catch (const std::ifstream::failure& ex)
 	{
-		std::cout << "Exception opening/readin file";
+		std::cout << "Exception opening/reading to file";
 		in.close();
 	}
 }
 
-Data::Data(int size_)
+Data::Data(const std::int32_t size_)
+	:size(size_)
 {
-	SIZE = size_;
-	matrix = std::vector<int>(SIZE * SIZE);
+	matrix = std::vector<std::int32_t>(size * size);
 }
 
-void Data::showMatrix()
+//Output matrix to console
+void Data::showMatrix() const
 {
-	
 	for (size_t i = 0; i < matrix.size(); ++i)
 	{
-		if (i % SIZE == 0)
+		if (i % size == 0)
 			std::cout << std::endl;
-		std::cout << matrix[i] << " ";
+		std::cout << matrix.at(i) << " ";
 	}
 	std::cout << std::endl;
 }
 
-int Data::getCell(int row, int col)
+std::int32_t Data::getCell(const std::int32_t row, const std::int32_t col) const
 {
-	return matrix[row, SIZE+col];
+	return matrix.at(row * size + col);
 }
 
-int Data::getSize()
+std::int32_t Data::getSize() const
 {
-	return SIZE;
+	return size;
 }

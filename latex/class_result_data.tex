@@ -1,0 +1,99 @@
+\hypertarget{class_result_data}{}\doxysection{Result\+Data Class Reference}
+\label{class_result_data}\index{ResultData@{ResultData}}
+
+
+Class for multiply matrices and store the result Stores and provides access to matrices data.  
+
+
+
+
+{\ttfamily \#include $<$Result\+Data.\+h$>$}
+
+Inheritance diagram for Result\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_result_data}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_result_data_a9bbd1a857f87e936c1ed4b52e0f2dd87}{Result\+Data}} (const std\+::int32\+\_\+t size\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_result_data_adbac7ec91c3665350c05e8318d8d1cbd}{mult\+Line}} (const std\+::int32\+\_\+t line\+Number, const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second)
+\begin{DoxyCompactList}\small\item\em Method calculates the row of the final matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_result_data_ac88c5fefea435a6c2d2564750dd75575}{save\+Result}} (const std\+::string \&path) const
+\begin{DoxyCompactList}\small\item\em Method saves the result of multiplication to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for multiply matrices and store the result Stores and provides access to matrices data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_result_data_a9bbd1a857f87e936c1ed4b52e0f2dd87}\label{class_result_data_a9bbd1a857f87e936c1ed4b52e0f2dd87}} 
+\index{ResultData@{ResultData}!ResultData@{ResultData}}
+\index{ResultData@{ResultData}!ResultData@{ResultData}}
+\doxysubsubsection{\texorpdfstring{ResultData()}{ResultData()}}
+{\footnotesize\ttfamily Result\+Data\+::\+Result\+Data (\begin{DoxyParamCaption}\item[{const std\+::int32\+\_\+t}]{size\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+\_\+} & Size of one dimension of the result matrix \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_result_data_adbac7ec91c3665350c05e8318d8d1cbd}\label{class_result_data_adbac7ec91c3665350c05e8318d8d1cbd}} 
+\index{ResultData@{ResultData}!multLine@{multLine}}
+\index{multLine@{multLine}!ResultData@{ResultData}}
+\doxysubsubsection{\texorpdfstring{multLine()}{multLine()}}
+{\footnotesize\ttfamily void Result\+Data\+::mult\+Line (\begin{DoxyParamCaption}\item[{const std\+::int32\+\_\+t}]{line\+Number,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{first,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{second }\end{DoxyParamCaption})}
+
+
+
+Method calculates the row of the final matrix. 
+
+Calculates matrix multiplication using the formula  \[
+    ResultData_{lineNumber,j}= \sum_{i = 1}^{Data::size}(A_{lineNumber, i}*B_{i, lineNumber}),\\
+    where\: lineNumber = 1..ResultData\!::\!size,\: i = 1..ResultData\!::\!size
+\] 
+\begin{DoxyParams}{Parameters}
+{\em line\+Number} & index of the line being calculated \\
+\hline
+{\em first} & matrix A for calculation \\
+\hline
+{\em second} & matrix B for calculation \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & on incompatible sizes \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_result_data_ac88c5fefea435a6c2d2564750dd75575}\label{class_result_data_ac88c5fefea435a6c2d2564750dd75575}} 
+\index{ResultData@{ResultData}!saveResult@{saveResult}}
+\index{saveResult@{saveResult}!ResultData@{ResultData}}
+\doxysubsubsection{\texorpdfstring{saveResult()}{saveResult()}}
+{\footnotesize\ttfamily void Result\+Data\+::save\+Result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Method saves the result of multiplication to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & to the matrix file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Result\+Data.\+h\item 
+Result\+Data.\+cpp\end{DoxyCompactItemize}

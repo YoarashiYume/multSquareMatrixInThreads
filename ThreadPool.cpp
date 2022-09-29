@@ -1,38 +1,38 @@
 #include "ThreadPool.h"
 
-void ThreadPool::start(int iter, Data& first, Data& second, ResultData& result)
+void ThreadPool::start(std::int32_t index,const Data & first,const Data & second,ResultData & result)
 {
-	while (!isWorkStart)
+	while (!isWorkStart.load())
 		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	//waiting for starting all threads
-	while (iter < result.getSize())
+	while (index < result.getSize())
 	{
-		result.multLine(iter, first, second);
-		iter += this->countOfThread;
+		result.multLine(index, first, second);
+		index += this->countOfThread;
 	}
 }
 
-ThreadPool::ThreadPool(Data& first, Data& second, ResultData& result)
+ThreadPool::ThreadPool(const Data & first,const Data & second, ResultData& result)
 {
 	countOfThread = 2;
 	for (size_t i = 0; i < 2; ++i)
-		workers.push_back(std::thread (&ThreadPool::start, this, i, std::ref(first), std::ref(second), std::ref(result)));
+		workers.emplace_back(std::thread (&ThreadPool::start, this, i, std::ref(first), std::ref(second), std::ref(result)));
 }
-ThreadPool::ThreadPool(const int threadCount, Data& first, Data& second, ResultData& result)
+ThreadPool::ThreadPool(const std::int32_t threadCount, const Data & first,const Data & second, ResultData& result)
 {
 	countOfThread = threadCount < 1 ? 1 : threadCount;
-	for (int i = 0; i < countOfThread; ++i)
-		workers.push_back(std::thread(&ThreadPool::start, this, i, std::ref(first), std::ref(second), std::ref(result)));
+	for (std::int32_t i = 0; i < countOfThread; ++i)
+		workers.emplace_back(std::thread(&ThreadPool::start, this, i, std::ref(first), std::ref(second), std::ref(result)));
 }
-void ThreadPool::runningThreads()
+void ThreadPool::runThreads()
 {
-	isWorkStart = true;
+	isWorkStart.store(true);
 }
-void ThreadPool::waitingEnd()
+void ThreadPool::waitEnd()
 {
+	//wait all threads
 	for (auto & th : workers)
 		th.join();
-	//wait all threads
-	isWorkStart = false;
+	isWorkStart.store(false);
 }
-int ThreadPool::countOfThread = 0;
+std::int32_t ThreadPool::countOfThread = 0;

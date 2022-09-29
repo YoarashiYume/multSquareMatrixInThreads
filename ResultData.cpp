@@ -1,43 +1,39 @@
 #include "ResultData.h"
 
-ResultData::ResultData(int size_) : Data(size_)
+ResultData::ResultData(const std::int32_t size_) 
+	: Data(size_)
 {
 }
 
-void ResultData::multLine(int lineNumber, Data& first, Data& second)
+void ResultData::multLine(const std::int32_t lineNumber, const Data& first, const Data& second)
 {
 	if (first.getSize() != second.getSize()|| first.getSize() != this->getSize())
 	{
 		std::cout << "incorrect matrix size\n";
-		std::exit(1);
+		throw std::runtime_error("incorrect matrix size");
 	}
-	for (size_t j = 0; j < SIZE; ++j)
-	{
-		for (size_t i = 0; i < SIZE; ++i)
-		{
-			//counting of one cell value
-			this->matrix[lineNumber * SIZE + j] += first.getCell(lineNumber, i) * second.getCell(i, j);
-		}
-	}
+	for (size_t j = 0; j < this->size; ++j)
+		for (size_t i = 0; i < this->size; ++i)
+			this->matrix.at(lineNumber * this->size + j) += first.getCell(lineNumber, i) * second.getCell(i, j);
 }
 
-void ResultData::saveResult(std::string patch)
+void ResultData::saveResult(const std::string& path) const
 {
 	std::ofstream out;
-	out.open(patch);
+	out.open(path);
 	try
 	{
-		for (size_t i = 0; i < SIZE * SIZE; ++i)
+		for (size_t i = 0; i < this->size * this->size; ++i)
 		{
-			if (i % SIZE == 0 && i != 0)
+			if (i % this->size == 0 && i != 0)
 				out << std::endl;
-			out << matrix[i] << " ";
+			out << matrix.at(i) << " ";
 		}
 		out.close();
 	}
 	catch (const std::ifstream::failure& ex)
 	{
-		std::cout << "Exception opening/readin file";
+		std::cout << "Exception opening/writing to file";
 		out.close();
 	}
 }

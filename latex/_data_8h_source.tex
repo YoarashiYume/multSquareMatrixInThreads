@@ -1,0 +1,36 @@
+\hypertarget{_data_8h_source}{}\doxysection{Data.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_DATA\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_DATA\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_data}{Data}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19     std::vector<std::int32\_t> \mbox{\hyperlink{class_data_a463c5d8baced65da1ec1f48233722e6c}{matrix}}; }
+\DoxyCodeLine{20     std::int32\_t \mbox{\hyperlink{class_data_a86ba7cb07acf0e92a3fb2e9ba82b045a}{size}};  }
+\DoxyCodeLine{21     }
+\DoxyCodeLine{22     }
+\DoxyCodeLine{27     \mbox{\hyperlink{class_data}{Data}}(\textcolor{keyword}{const} std::int32\_t size\_);}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_data}{Data}}(\textcolor{keyword}{const} std::string\& path);}
+\DoxyCodeLine{34     }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_data}{Data}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_data_a5a292343f07b0177dcd874a3b226b8ee}{showMatrix}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41     }
+\DoxyCodeLine{48     std::int32\_t \mbox{\hyperlink{class_data_a3238ab7ae40c6224b1919335f749710b}{getCell}}(\textcolor{keyword}{const} std::int32\_t row, \textcolor{keyword}{const} std::int32\_t col) \textcolor{keyword}{const};}
+\DoxyCodeLine{49     }
+\DoxyCodeLine{54     std::int32\_t \mbox{\hyperlink{class_data_acd106ce6ae0c0b8288027f795e82ec9c}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55 \};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

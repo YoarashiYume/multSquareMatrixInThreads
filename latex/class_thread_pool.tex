@@ -1,0 +1,72 @@
+\hypertarget{class_thread_pool}{}\doxysection{Thread\+Pool Class Reference}
+\label{class_thread_pool}\index{ThreadPool@{ThreadPool}}
+
+
+Simple \mbox{\hyperlink{class_thread_pool}{Thread\+Pool}} class Run \mbox{\hyperlink{class_result_data_adbac7ec91c3665350c05e8318d8d1cbd}{Result\+Data\+::mult\+Line}} in threads.  
+
+
+
+
+{\ttfamily \#include $<$Thread\+Pool.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_thread_pool_acc04e7f485afbffd56f8fff66210cf26}{Thread\+Pool}} (const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second, \mbox{\hyperlink{class_result_data}{Result\+Data}} \&result)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_thread_pool_a0196a40da61aed96d01fa222ac4babb7}{Thread\+Pool}} (const std\+::int32\+\_\+t thread\+Count, const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second, \mbox{\hyperlink{class_result_data}{Result\+Data}} \&result)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_thread_pool_a335fa4912aea661d11a620f814434998}\label{class_thread_pool_a335fa4912aea661d11a620f814434998}} 
+void {\bfseries run\+Threads} ()
+\begin{DoxyCompactList}\small\item\em Starts threads to execute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_thread_pool_a49179be4f6372c15d71047cf921e6d5f}\label{class_thread_pool_a49179be4f6372c15d71047cf921e6d5f}} 
+void {\bfseries wait\+End} ()
+\begin{DoxyCompactList}\small\item\em waiting for threads to stop \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple \mbox{\hyperlink{class_thread_pool}{Thread\+Pool}} class Run \mbox{\hyperlink{class_result_data_adbac7ec91c3665350c05e8318d8d1cbd}{Result\+Data\+::mult\+Line}} in threads. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_thread_pool_acc04e7f485afbffd56f8fff66210cf26}\label{class_thread_pool_acc04e7f485afbffd56f8fff66210cf26}} 
+\index{ThreadPool@{ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!ThreadPool@{ThreadPool}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{first,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{second,  }\item[{\mbox{\hyperlink{class_result_data}{Result\+Data}} \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first,second} & input matrices \\
+\hline
+{\em result} & output matrices \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_thread_pool_a0196a40da61aed96d01fa222ac4babb7}\label{class_thread_pool_a0196a40da61aed96d01fa222ac4babb7}} 
+\index{ThreadPool@{ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!ThreadPool@{ThreadPool}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{const std\+::int32\+\_\+t}]{thread\+Count,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{first,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{second,  }\item[{\mbox{\hyperlink{class_result_data}{Result\+Data}} \&}]{result }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thread\+Count} & \mbox{\hyperlink{class_thread_pool}{Thread\+Pool}} size \\
+\hline
+{\em first,second} & input matrices \\
+\hline
+{\em result} & output matrices \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Thread\+Pool.\+h\item 
+Thread\+Pool.\+cpp\end{DoxyCompactItemize}
