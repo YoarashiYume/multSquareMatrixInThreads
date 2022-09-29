@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getcell_0',['getCell',['../class_data.html#a3238ab7ae40c6224b1919335f749710b',1,'Data']]],
-  ['getsize_1',['getSize',['../class_data.html#acd106ce6ae0c0b8288027f795e82ec9c',1,'Data']]]
+  ['data_0',['Data',['../class_data.html',1,'Data'],['../class_data.html#a562f5fbd403006bfda6330a8ba4d1e21',1,'Data::Data(const std::int32_t size_)'],['../class_data.html#ae653680b4a3fedbded1fe954fc47185a',1,'Data::Data(const std::string &amp;path)']]]
 ];

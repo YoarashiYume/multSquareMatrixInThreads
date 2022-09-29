@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['saveresult_0',['saveResult',['../class_result_data.html#ac88c5fefea435a6c2d2564750dd75575',1,'ResultData']]],
-  ['showmatrix_1',['showMatrix',['../class_data.html#a5a292343f07b0177dcd874a3b226b8ee',1,'Data']]],
-  ['size_2',['size',['../class_data.html#a86ba7cb07acf0e92a3fb2e9ba82b045a',1,'Data']]]
+  ['matrix_0',['matrix',['../class_data.html#a463c5d8baced65da1ec1f48233722e6c',1,'Data']]],
+  ['multiplying_20square_20matrices_20in_20threads_1',['Multiplying square matrices in threads',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['multline_2',['multLine',['../class_result_data.html#adbac7ec91c3665350c05e8318d8d1cbd',1,'ResultData']]]
 ];

@@ -78,6 +78,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_thread_pool-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ThreadPool Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
@@ -93,9 +96,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc04e7f485afbffd56f8fff66210cf26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_pool.html#acc04e7f485afbffd56f8fff66210cf26">ThreadPool</a> (const <a class="el" href="class_data.html">Data</a> &amp;first, const <a class="el" href="class_data.html">Data</a> &amp;second, <a class="el" href="class_result_data.html">ResultData</a> &amp;result)</td></tr>
 <tr class="memdesc:acc04e7f485afbffd56f8fff66210cf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_thread_pool.html#acc04e7f485afbffd56f8fff66210cf26">More...</a><br /></td></tr>
 <tr class="separator:acc04e7f485afbffd56f8fff66210cf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0196a40da61aed96d01fa222ac4babb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_pool.html#a0196a40da61aed96d01fa222ac4babb7">ThreadPool</a> (const std::int32_t threadCount, const <a class="el" href="class_data.html">Data</a> &amp;first, const <a class="el" href="class_data.html">Data</a> &amp;second, <a class="el" href="class_result_data.html">ResultData</a> &amp;result)</td></tr>
-<tr class="memdesc:a0196a40da61aed96d01fa222ac4babb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_thread_pool.html#a0196a40da61aed96d01fa222ac4babb7">More...</a><br /></td></tr>
-<tr class="separator:a0196a40da61aed96d01fa222ac4babb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe66dcac9aba3879aa0c41c6295d981"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_pool.html#a4fe66dcac9aba3879aa0c41c6295d981">ThreadPool</a> (std::int32_t threadCount, const <a class="el" href="class_data.html">Data</a> &amp;first, const <a class="el" href="class_data.html">Data</a> &amp;second, <a class="el" href="class_result_data.html">ResultData</a> &amp;result)</td></tr>
+<tr class="memdesc:a4fe66dcac9aba3879aa0c41c6295d981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_thread_pool.html#a4fe66dcac9aba3879aa0c41c6295d981">More...</a><br /></td></tr>
+<tr class="separator:a4fe66dcac9aba3879aa0c41c6295d981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a335fa4912aea661d11a620f814434998"><td class="memItemLeft" align="right" valign="top"><a id="a335fa4912aea661d11a620f814434998" name="a335fa4912aea661d11a620f814434998"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>runThreads</b> ()</td></tr>
 <tr class="memdesc:a335fa4912aea661d11a620f814434998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts threads to execute. <br /></td></tr>
@@ -104,6 +107,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>runThreads</b> ()</td
 void&#160;</td><td class="memItemRight" valign="bottom"><b>waitEnd</b> ()</td></tr>
 <tr class="memdesc:a49179be4f6372c15d71047cf921e6d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">waiting for threads to stop <br /></td></tr>
 <tr class="separator:a49179be4f6372c15d71047cf921e6d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aed6ea0a6d39dc1df3f15bae85fc3616b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread_pool.html#aed6ea0a6d39dc1df3f15bae85fc3616b">start</a> (const std::int32_t index, const <a class="el" href="class_data.html">Data</a> &amp;first, const <a class="el" href="class_data.html">Data</a> &amp;second, <a class="el" href="class_result_data.html">ResultData</a> &amp;result)</td></tr>
+<tr class="memdesc:aed6ea0a6d39dc1df3f15bae85fc3616b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method calculates the row of the final matrix.  <a href="class_thread_pool.html#aed6ea0a6d39dc1df3f15bae85fc3616b">More...</a><br /></td></tr>
+<tr class="separator:aed6ea0a6d39dc1df3f15bae85fc3616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5a712d794ac3c55e3180635ca46c9402"><td class="memItemLeft" align="right" valign="top"><a id="a5a712d794ac3c55e3180635ca46c9402" name="a5a712d794ac3c55e3180635ca46c9402"></a>
+std::atomic_bool&#160;</td><td class="memItemRight" valign="bottom"><b>isWorkStart</b> {false}</td></tr>
+<tr class="memdesc:a5a712d794ac3c55e3180635ca46c9402"><td class="mdescLeft">&#160;</td><td class="mdescRight">current state <br /></td></tr>
+<tr class="separator:a5a712d794ac3c55e3180635ca46c9402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef531ca4b7d046f3acaf4b5b36cdeff"><td class="memItemLeft" align="right" valign="top"><a id="a9ef531ca4b7d046f3acaf4b5b36cdeff" name="a9ef531ca4b7d046f3acaf4b5b36cdeff"></a>
+std::vector&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>workers</b></td></tr>
+<tr class="memdesc:a9ef531ca4b7d046f3acaf4b5b36cdeff"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of threads <br /></td></tr>
+<tr class="separator:a9ef531ca4b7d046f3acaf4b5b36cdeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a208b0d261d294060c9ab5072e19b2cfb"><td class="memItemLeft" align="right" valign="top"><a id="a208b0d261d294060c9ab5072e19b2cfb" name="a208b0d261d294060c9ab5072e19b2cfb"></a>
+static std::int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>countOfThread</b> = 0</td></tr>
+<tr class="memdesc:a208b0d261d294060c9ab5072e19b2cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of running threads <br /></td></tr>
+<tr class="separator:a208b0d261d294060c9ab5072e19b2cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Simple <a class="el" href="class_thread_pool.html" title="Simple ThreadPool class Run ResultData::multLine in threads.">ThreadPool</a> class Run <a class="el" href="class_result_data.html#adbac7ec91c3665350c05e8318d8d1cbd" title="Method calculates the row of the final matrix.">ResultData::multLine</a> in threads. </p>
@@ -151,8 +178,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>waitEnd</b> ()</td></
 
 </div>
 </div>
-<a id="a0196a40da61aed96d01fa222ac4babb7" name="a0196a40da61aed96d01fa222ac4babb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0196a40da61aed96d01fa222ac4babb7">&#9670;&#160;</a></span>ThreadPool() <span class="overload">[2/2]</span></h2>
+<a id="a4fe66dcac9aba3879aa0c41c6295d981" name="a4fe66dcac9aba3879aa0c41c6295d981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fe66dcac9aba3879aa0c41c6295d981">&#9670;&#160;</a></span>ThreadPool() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +187,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>waitEnd</b> ()</td></
         <tr>
           <td class="memname">ThreadPool::ThreadPool </td>
           <td>(</td>
-          <td class="paramtype">const std::int32_t&#160;</td>
+          <td class="paramtype">std::int32_t&#160;</td>
           <td class="paramname"><em>threadCount</em>, </td>
         </tr>
         <tr>
@@ -195,6 +222,77 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>waitEnd</b> ()</td></
     <tr><td class="paramname">threadCount</td><td><a class="el" href="class_thread_pool.html" title="Simple ThreadPool class Run ResultData::multLine in threads.">ThreadPool</a> size </td></tr>
     <tr><td class="paramname">first,second</td><td>input matrices </td></tr>
     <tr><td class="paramname">result</td><td>output matrices </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aed6ea0a6d39dc1df3f15bae85fc3616b" name="aed6ea0a6d39dc1df3f15bae85fc3616b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed6ea0a6d39dc1df3f15bae85fc3616b">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThreadPool::start </td>
+          <td>(</td>
+          <td class="paramtype">const std::int32_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_data.html">Data</a> &amp;&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_result_data.html">ResultData</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method calculates the row of the final matrix. </p>
+<p >Calculates matrix multiplication using the formula  </p><p class="formulaDsp">
+\[
+    ResultData_{lineNumber,j}= \sum_{i = 1}^{Data::size}(A_{lineNumber, i}*B_{i, lineNumber}),\\
+    where\: lineNumber = 1..ResultData\!::\!size,\: i = 1..ResultData\!::\!size
+\]
+</p>
+ <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index of the line being calculated </td></tr>
+    <tr><td class="paramname">first,second</td><td>input matrices </td></tr>
+    <tr><td class="paramname">result</td><td>output matrices </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">runtime_error</td><td>on incompatible sizes </td></tr>
   </table>
   </dd>
 </dl>

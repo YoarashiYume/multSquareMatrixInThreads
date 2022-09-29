@@ -15,17 +15,17 @@
 \DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_thread_pool}{ThreadPool}} final}
 \DoxyCodeLine{17 \{}
 \DoxyCodeLine{18 \textcolor{keyword}{private}:}
-\DoxyCodeLine{19     \textcolor{keyword}{static} std::int32\_t countOfThread;      }
-\DoxyCodeLine{20     std::atomic\_bool isWorkStart\{\textcolor{keyword}{false}\};    }
+\DoxyCodeLine{19     \textcolor{keyword}{static} std::int32\_t \mbox{\hyperlink{class_thread_pool_a208b0d261d294060c9ab5072e19b2cfb}{countOfThread}};     }
+\DoxyCodeLine{20     std::atomic\_bool \mbox{\hyperlink{class_thread_pool_a5a712d794ac3c55e3180635ca46c9402}{isWorkStart}}\{\textcolor{keyword}{false}\}; }
 \DoxyCodeLine{21     }
-\DoxyCodeLine{22     std::vector<std::thread> workers;       }
+\DoxyCodeLine{22     std::vector<std::thread> \mbox{\hyperlink{class_thread_pool_a9ef531ca4b7d046f3acaf4b5b36cdeff}{workers}};        }
 \DoxyCodeLine{23     }
-\DoxyCodeLine{37     \textcolor{keywordtype}{void} start(\textcolor{keyword}{const} std::int32\_t index,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& first,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& second,\mbox{\hyperlink{class_result_data}{ResultData}} \& result) ;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_thread_pool_aed6ea0a6d39dc1df3f15bae85fc3616b}{start}}(\textcolor{keyword}{const} std::int32\_t index,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& first,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& second,\mbox{\hyperlink{class_result_data}{ResultData}} \& result) ;}
 \DoxyCodeLine{38 \textcolor{keyword}{public}:}
 \DoxyCodeLine{39     \mbox{\hyperlink{class_thread_pool}{ThreadPool}}() = \textcolor{keyword}{delete};}
 \DoxyCodeLine{45     \mbox{\hyperlink{class_thread_pool}{ThreadPool}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& first,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& second, \mbox{\hyperlink{class_result_data}{ResultData}}\& result);}
 \DoxyCodeLine{46     }
-\DoxyCodeLine{53     \mbox{\hyperlink{class_thread_pool}{ThreadPool}}(\textcolor{keyword}{const} std::int32\_t threadCount, \textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& first,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& second, \mbox{\hyperlink{class_result_data}{ResultData}}\& result);}
+\DoxyCodeLine{53     \mbox{\hyperlink{class_thread_pool}{ThreadPool}}(std::int32\_t threadCount, \textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& first,\textcolor{keyword}{const} \mbox{\hyperlink{class_data}{Data}} \& second, \mbox{\hyperlink{class_result_data}{ResultData}}\& result);}
 \DoxyCodeLine{54     }
 \DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_thread_pool_a335fa4912aea661d11a620f814434998}{runThreads}}();}
 \DoxyCodeLine{59     }

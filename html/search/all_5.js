@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['threadpool_0',['ThreadPool',['../class_thread_pool.html',1,'ThreadPool'],['../class_thread_pool.html#acc04e7f485afbffd56f8fff66210cf26',1,'ThreadPool::ThreadPool(const Data &amp;first, const Data &amp;second, ResultData &amp;result)'],['../class_thread_pool.html#a0196a40da61aed96d01fa222ac4babb7',1,'ThreadPool::ThreadPool(const std::int32_t threadCount, const Data &amp;first, const Data &amp;second, ResultData &amp;result)']]]
+  ['resultdata_0',['ResultData',['../class_result_data.html',1,'ResultData'],['../class_result_data.html#a9bbd1a857f87e936c1ed4b52e0f2dd87',1,'ResultData::ResultData()']]],
+  ['runthreads_1',['runThreads',['../class_thread_pool.html#a335fa4912aea661d11a620f814434998',1,'ThreadPool']]]
 ];

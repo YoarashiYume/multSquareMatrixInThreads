@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['matrix_0',['matrix',['../class_data.html#a463c5d8baced65da1ec1f48233722e6c',1,'Data']]],
-  ['multiplying_20square_20matrices_20in_20threads_1',['Multiplying square matrices in threads',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['multline_2',['multLine',['../class_result_data.html#adbac7ec91c3665350c05e8318d8d1cbd',1,'ResultData']]]
+  ['getcell_0',['getCell',['../class_data.html#a3238ab7ae40c6224b1919335f749710b',1,'Data']]],
+  ['getsize_1',['getSize',['../class_data.html#acd106ce6ae0c0b8288027f795e82ec9c',1,'Data']]]
 ];

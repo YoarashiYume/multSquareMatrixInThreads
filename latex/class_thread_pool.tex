@@ -14,7 +14,7 @@ Simple \mbox{\hyperlink{class_thread_pool}{Thread\+Pool}} class Run \mbox{\hyper
 \item 
 \mbox{\hyperlink{class_thread_pool_acc04e7f485afbffd56f8fff66210cf26}{Thread\+Pool}} (const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second, \mbox{\hyperlink{class_result_data}{Result\+Data}} \&result)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_thread_pool_a0196a40da61aed96d01fa222ac4babb7}{Thread\+Pool}} (const std\+::int32\+\_\+t thread\+Count, const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second, \mbox{\hyperlink{class_result_data}{Result\+Data}} \&result)
+\mbox{\hyperlink{class_thread_pool_a4fe66dcac9aba3879aa0c41c6295d981}{Thread\+Pool}} (std\+::int32\+\_\+t thread\+Count, const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second, \mbox{\hyperlink{class_result_data}{Result\+Data}} \&result)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_thread_pool_a335fa4912aea661d11a620f814434998}\label{class_thread_pool_a335fa4912aea661d11a620f814434998}} 
 void {\bfseries run\+Threads} ()
@@ -22,6 +22,26 @@ void {\bfseries run\+Threads} ()
 \mbox{\Hypertarget{class_thread_pool_a49179be4f6372c15d71047cf921e6d5f}\label{class_thread_pool_a49179be4f6372c15d71047cf921e6d5f}} 
 void {\bfseries wait\+End} ()
 \begin{DoxyCompactList}\small\item\em waiting for threads to stop \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_thread_pool_aed6ea0a6d39dc1df3f15bae85fc3616b}{start}} (const std\+::int32\+\_\+t index, const \mbox{\hyperlink{class_data}{Data}} \&first, const \mbox{\hyperlink{class_data}{Data}} \&second, \mbox{\hyperlink{class_result_data}{Result\+Data}} \&result)
+\begin{DoxyCompactList}\small\item\em Method calculates the row of the final matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_thread_pool_a5a712d794ac3c55e3180635ca46c9402}\label{class_thread_pool_a5a712d794ac3c55e3180635ca46c9402}} 
+std\+::atomic\+\_\+bool {\bfseries is\+Work\+Start} \{false\}
+\begin{DoxyCompactList}\small\item\em current state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_thread_pool_a9ef531ca4b7d046f3acaf4b5b36cdeff}\label{class_thread_pool_a9ef531ca4b7d046f3acaf4b5b36cdeff}} 
+std\+::vector$<$ std\+::thread $>$ {\bfseries workers}
+\begin{DoxyCompactList}\small\item\em vector of threads \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_thread_pool_a208b0d261d294060c9ab5072e19b2cfb}\label{class_thread_pool_a208b0d261d294060c9ab5072e19b2cfb}} 
+static std\+::int32\+\_\+t {\bfseries count\+Of\+Thread} = 0
+\begin{DoxyCompactList}\small\item\em number of running threads \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -45,11 +65,11 @@ Constructor.
 {\em result} & output matrices \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_thread_pool_a0196a40da61aed96d01fa222ac4babb7}\label{class_thread_pool_a0196a40da61aed96d01fa222ac4babb7}} 
+\mbox{\Hypertarget{class_thread_pool_a4fe66dcac9aba3879aa0c41c6295d981}\label{class_thread_pool_a4fe66dcac9aba3879aa0c41c6295d981}} 
 \index{ThreadPool@{ThreadPool}!ThreadPool@{ThreadPool}}
 \index{ThreadPool@{ThreadPool}!ThreadPool@{ThreadPool}}
 \doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{const std\+::int32\+\_\+t}]{thread\+Count,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{first,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{second,  }\item[{\mbox{\hyperlink{class_result_data}{Result\+Data}} \&}]{result }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{std\+::int32\+\_\+t}]{thread\+Count,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{first,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{second,  }\item[{\mbox{\hyperlink{class_result_data}{Result\+Data}} \&}]{result }\end{DoxyParamCaption})}
 
 
 
@@ -64,6 +84,36 @@ Constructor.
 {\em result} & output matrices \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_thread_pool_aed6ea0a6d39dc1df3f15bae85fc3616b}\label{class_thread_pool_aed6ea0a6d39dc1df3f15bae85fc3616b}} 
+\index{ThreadPool@{ThreadPool}!start@{start}}
+\index{start@{start}!ThreadPool@{ThreadPool}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Thread\+Pool\+::start (\begin{DoxyParamCaption}\item[{const std\+::int32\+\_\+t}]{index,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{first,  }\item[{const \mbox{\hyperlink{class_data}{Data}} \&}]{second,  }\item[{\mbox{\hyperlink{class_result_data}{Result\+Data}} \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method calculates the row of the final matrix. 
+
+Calculates matrix multiplication using the formula  \[
+    ResultData_{lineNumber,j}= \sum_{i = 1}^{Data::size}(A_{lineNumber, i}*B_{i, lineNumber}),\\
+    where\: lineNumber = 1..ResultData\!::\!size,\: i = 1..ResultData\!::\!size
+\] 
+\begin{DoxyParams}{Parameters}
+{\em index} & index of the line being calculated \\
+\hline
+{\em first,second} & input matrices \\
+\hline
+{\em result} & output matrices \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & on incompatible sizes \\
+\hline
+\end{DoxyExceptions}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
