@@ -4,7 +4,6 @@
 #include <thread>
 #include <vector>
 #include <chrono>
-#include <functional>
 #include <atomic>
 
 #include "ResultData.h"
