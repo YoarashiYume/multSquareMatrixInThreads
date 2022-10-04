@@ -33,6 +33,7 @@ public:
 	Data(const std::string& path);
 	
 	Data() = delete;
+	virtual ~Data()=default;
 	
 	/**
 	\brief Matrix output method
